@@ -1,0 +1,606 @@
+// imports
+
+// fuente:
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+//font-family: 'Architects Daughter', cursive;
+
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+//font-family: 'Varela Round', sans-serif;
+
+//paleta de colores
+$primary-color: #ffedc4;
+$secondary-color: #ffe0d8;
+$tertiary-color: #cdfecf;
+$quaternary-color: #ffffbc;
+$quinary-color: #d7efff;
+
+//mixings
+@mixin card {
+  background-color: $primary-color;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: black 5px 7px 10px;
+  border-color: grey;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.2em;
+  width: 20%;
+  height: auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h4 {
+    font-family: "Architects Daughter", cursive;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+  }
+  &:hover {
+    background-color: $tertiary-color;
+    box-shadow: black 5px 7px 10px;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    color: black;
+  }
+}
+
+//reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+//Page
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $quinary-color;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+//Navbar
+
+header {
+  margin-top: 2px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Architects Daughter", cursive;
+  font-size: large;
+  color: black;
+  position: sticky;
+  z-index: 10;
+  top: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  img {
+    margin-left: 20px;
+    width: 95px;
+    height: auto;
+    border-radius: 12px;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  label {
+    display: none;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    color: black;
+  }
+  #btn-menu {
+    display: none;
+    align-self: center;
+  }
+  nav {
+    align-self: center;
+    margin-right: 20px;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: medium;
+      font-family: "Varela Round", sans-serif;
+      &:hover {
+        color: blueviolet;
+      }
+    }
+  }
+}
+//Portada alusiva
+
+.portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin-top: -50px;
+  img {
+    width: 90%;
+    height: auto;
+  }
+  h2 {
+    position: relative;
+    font-family: "Architects Daughter", cursive;
+    font-size: 3.5em;
+    font-weight: 600;
+    top: 200px;
+    right: -260px;
+  }
+}
+//Cards
+
+h3 {
+  font-family: "Architects Daughter", cursive;
+  font-size: 2em;
+  font-weight: 300;
+  margin-top: 20px;
+  //colocacion de entidad
+  &:after {
+    content: "\21B7";
+    width: 100px;
+    height: 2px;
+    margin: 0 auto;
+  }
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px 0px 20px 0px;
+  padding: 0;
+  .card {
+    @include card;
+  }
+}
+//Gallery
+.imagenes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px 0px 20px 0px;
+  padding: 0;
+
+  img {
+    width: 800px;
+    height: 400px;
+  }
+
+  .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    h5 {
+      color: black;
+      font-size: 22px;
+    }
+    p {
+      color: black;
+      font-size: 19px;
+      font-weight: 400;
+    }
+  }
+}
+//Login y Register
+
+.formularios {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .login,
+  .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    margin-top: 40px;
+    i {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 3.5em;
+      align-items: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      input {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 2px solid black;
+        font-family: "Varela Round", sans-serif;
+        font-size: 1.2em;
+        // font-weight: bold;
+        color: black;
+      }
+      button {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 2px solid black;
+        font-family: "Varela Round", sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//footer
+
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.281);
+  margin-top: auto;
+  img {
+    width: 90px;
+    height: auto;
+    border-radius: 13px;
+  }
+  i {
+    color: black;
+    &:hover {
+      color: blue;
+      cursor: pointer;
+      transition: all 0.5s;
+      transform: scale3d(2, 2, 2);
+    }
+  }
+}
+span {
+  font-size: 1em;
+  font-family: "Varela Round", sans-serif;
+  color: black;
+  font-weight: 700;
+}
+
+// Animaciones
+//h2
+.animate__heartBeat {
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+}
+//scrollup
+.animate__flip {
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+  i {
+    margin: 30px 0px 40px 0px;
+  }
+}
+
+//Responsive desktop first
+//1920px (ok)
+//1280px (ok)
+//1024px (ok)
+//768px (ok)
+//480px (ok)
+@media (max-width: 1280px) {
+  .portada {
+    img {
+      width: 90%;
+      height: auto;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    h2 {
+      position: relative;
+      font-family: "Architects Daughter", cursive;
+      font-size: 2.5em;
+      font-weight: 400;
+      top: 165px;
+      right: -210px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .portada {
+    img {
+      width: 90%;
+      height: auto;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    h2 {
+      position: relative;
+      font-family: "Architects Daughter", cursive;
+      font-size: 2em;
+      font-weight: 400;
+      top: 165px;
+      right: -165px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+    height: auto;
+    .logo {
+      width: 55px;
+      height: auto;
+    }
+    h1 {
+      font-size: 1.3em;
+      margin: 0;
+    }
+
+    label {
+      display: block;
+      margin-right: 20px;
+    }
+    .menu {
+      display: none;
+      background-color: rgba(128, 128, 128, 0.329);
+      position: relative;
+      ul {
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-color: $primary-color;
+        border-radius: 10px;
+        align-items: center;
+        a {
+          font-size: 0.5em;
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+    #btn-menu:checked ~ .menu {
+      display: block;
+    }
+  }
+  .portada {
+    img {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    h2 {
+      position: relative;
+      font-family: "Architects Daughter", cursive;
+      font-size: 1.5em;
+      font-weight: 400;
+      top: 105px;
+      right: -95px;
+    }
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .card-container {
+    margin: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card {
+      width: 90%;
+      height: auto;
+      margin: 10px;
+    }
+  }
+  section {
+    width: 530px;
+    height: auto;
+    .img {
+      width: 100px;
+      height: auto;
+    }
+  }
+  footer {
+    justify-items: stretch;
+    img {
+      width: 50px;
+      height: auto;
+      border-radius: 13px;
+    }
+    span {
+      font-size: 0.7em;
+      font-family: "Varela Round", sans-serif;
+      color: rgb(54, 70, 3);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+    i {
+      width: 15px;
+      margin-left: 10px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  header {
+    justify-content: space-between;
+    height: auto;
+    .logo {
+      width: 40px;
+      height: auto;
+    }
+    h1 {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    label {
+      display: block;
+      margin-right: 20px;
+    }
+    .menu {
+      display: none;
+      background-color: rgba(128, 128, 128, 0.329);
+      position: relative;
+      ul {
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-color: $primary-color;
+        border-radius: 10px;
+        align-items: center;
+        a {
+          font-size: 0.5em;
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+    #btn-menu:checked ~ .menu {
+      display: block;
+    }
+  }
+  .portada {
+    img {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      margin-top: 60px;
+    }
+    h2 {
+      position: relative;
+      font-family: "Architects Daughter", cursive;
+      font-size: 1.2em;
+      font-weight: 400;
+      top: 125px;
+    }
+  }
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card {
+      width: 52%;
+      height: auto;
+      margin: 10px;
+      h4 {
+        font-size: 1.1em;
+      }
+      p {
+        font-size: 0.8em;
+      }
+    }
+  }
+  .imagenes {
+    width: 97%;
+    height: auto;
+    section {
+      width: 85%;
+      height: auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .carousel-caption {
+      width: 70%;
+      height: auto;
+      h5 {
+        font-size: 1em;
+      }
+      p {
+        font-size: 0.7em;
+      }
+    }
+  }
+  .formularios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    h3 {
+      font-size: 1.2em;
+    }
+
+    .login,
+    .register {
+      display: flex;
+      flex-direction: nowrap;
+      align-items: center;
+      width: 30%;
+      height: auto;
+      margin-top: 5px;
+      i {
+        margin-top: 30px;
+        margin-bottom: 2px;
+        font-size: 2em;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        input {
+          width: 75%;
+          height: auto;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding: 10px;
+          border: 2px solid black;
+          font-family: "Varela Round", sans-serif;
+          font-size: 0.5em;
+          color: black;
+        }
+        button {
+          width: 100%;
+          height: auto;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding: 10px;
+          border: 2px solid black;
+          font-family: "Varela Round", sans-serif;
+          font-size: 0.6em;
+          font-weight: bold;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

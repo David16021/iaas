@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Un sitio donde estan los mejores sitios para disfrutar junto a la naturaleza en Argentina" />
+    <!-- import fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <!-- import Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- icono en tab -->
+    <link rel="shortcut icon" href="./assets/logotab.ico" alt="balija" />
+    <!-- import CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Integrador HTML y CSS</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="./index.html" aria-label="to home">
+        <img class="logo" src="./assets/logo" alt="logoPrincipal" />
+      </a>
+      <h1>Contactanos !</h1>
+      <input class="btn" type="checkbox" id="btn-menu" />
+      <label for="btn-menu"><i class="fas fa-bars"></i></label>
+      <nav class="menu">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <!--<li><a href="./gallery.html">Galeria</a></li>-->
+          <li><a href="#">Proyectos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Login -->
+    <main class="formularios">
+      <section class="login">
+        <h3>Login</h3>
+        <form class="contenedor">
+          <i class="fas fa-user-astronaut"></i>
+          <div>
+            <label>
+              <input type="email" id="correo" name="correo" placeholder="Email" />
+            </label>
+            <br />
+            <label>
+              <input type="password" id="contraseña" name="contraseña" placeholder="Password" />
+            </label>
+            <br />
+            <label>
+              <button class="entrar">
+                Entrar
+                <a href="http://google.com"></a>
+              </button>
+            </label>
+            <br />
+            <button class="reset">
+              Olvide mi contraseña
+              <a href="https://plataforma.nucba.io/home"></a>
+            </button>
+            <br />
+            <br />
+            <label> </label>
+          </div>
+        </form>
+      </section>
+      <!-- Register -->
+      <section class="register">
+        <h3>Registrate</h3>
+        <form class="contenedor">
+          <i class="fas fa-user-astronaut"></i>
+          <div>
+            <label>
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+            </label>
+            <br />
+            <label>
+              <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+            </label>
+            <br />
+            <label>
+              <input type="email" id="correo" name="correo" placeholder="Email" />
+            </label>
+            <br />
+            <label>
+              <input type="password" id="contraseña" name="contraseña" placeholder="Password" />
+            </label>
+            <br />
+            <label>
+              <button class="registrar">
+                Registrate
+                <a href="http://google.com"></a>
+              </button>
+            </label>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+  <!-- Footer -->
+  <footer>
+    <a href="./index.html">
+      <img src="./assets/logo" alt="logoFin" />
+    </a>
+    <a href="https://wa.me/+573134636245" target="_blank" title="Chat">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <i class="fab fa-facebook-square" title="Seguir"></i>
+    <i class="fab fa-instagram" title="Seguir"></i>
+    <i class="fab fa-github" title="Fuente"></i>
+    <i class="fas fa-envelope" title="Contacto"></i>
+    <span> By &COPY;Luchito{Developer} for IAAS </span>
+  </footer>
+</html>
